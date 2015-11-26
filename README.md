@@ -1,6 +1,6 @@
 # jcard
 
-A javascript class to generate JCards
+A javascript class to generate JCards ([RFC 7095](http://tools.ietf.org/html/rfc7095))
 
 Run QUnit tests by launching ```/card/src/test/index.html```
 
