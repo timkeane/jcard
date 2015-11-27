@@ -239,7 +239,7 @@ jcard.Builder.prototype = {
 	 *  @return {Array}
 	 */
 	jcard: function(){
-		this.checkFormattedValues();
+		this.checkForFormattedName();
 		return this.data;
 	},
 	/** @export
@@ -249,7 +249,7 @@ jcard.Builder.prototype = {
 		return JSON.stringify(this.jcard());
 	},
 	/** @private */
-	checkFormattedValues: function(){
+	checkForFormattedName: function(){
 		var data = this.data[1], formattedName;
 		for (var i = 0; i < data.length; i++){
 			var prop = data[i];
