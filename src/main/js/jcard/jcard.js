@@ -223,15 +223,15 @@ jcard.Builder.prototype = {
 	 *  @param {Array} prop
 	 */ 
 	add: function(prop){
-		if (prop[0] == jcard.Property.NAME){
+		if (!this.nameValue && prop[0] == jcard.Property.NAME){
 			var values = [];
 			for (var i = 2; i < prop.length; i++){
 				values.push(prop[i]);
 			}
-			this.nameValue = this.nameValue || values;
+			this.nameValue = values;
 		}
-		if (prop[0] == jcard.Property.ORGANIZATION){
-			this.orgValue = this.orgValue || prop[3];
+		if (!this.orgValue && prop[0] == jcard.Property.ORGANIZATION){
+			this.orgValue = prop[3];
 		}
 		this.data[1].push(prop);
 	},
