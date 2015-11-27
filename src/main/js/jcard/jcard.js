@@ -278,7 +278,7 @@ jcard.Builder.prototype = {
 		}else {
 			formattedName = this.orgValue || '';
 		}
-		formattedName = formattedName.trim().replace(/  /, ' ')
+		formattedName = formattedName.trim().replace(/  /, ' ');
 		if (formattedName){
 			var prop = this.prop(jcard.Property.FORMATTED_NAME, {}, jcard.Data.TEXT, [formattedName]);
 			this.add(prop);
